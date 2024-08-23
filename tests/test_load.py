@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import pytest
 
 from dundie.core import load
@@ -25,3 +26,12 @@ def test_db_schema():
     load(PEOPLE_FILE)
     db = connect()
     assert db.keys() == EMPTY_DB.keys()
+=======
+from dundie.core import load
+
+def test_load():
+    """Test load Function"""
+    assert len(load('test/assets/people.csv')) == 2
+    assert (load("test/assets/people.csv"))[0][0] == 'j' 
+    
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c

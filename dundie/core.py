@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Core module of dundie"""
 import os
 from csv import reader
@@ -77,3 +78,15 @@ def add(value, **query):
     for person in people:
         add_movement(db, person["email"], value, user)
     commit(db)
+=======
+""""Core mule of dundie"""
+
+
+def load(filepath):
+    try:
+        with open(filepath) as file_:
+            for line in file_:
+                print(line)
+    except FileNotFoundError as e:
+        print(f"file not found {e}")
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c

@@ -1,4 +1,5 @@
 import os
+<<<<<<< HEAD
 from setuptools import setup, find_packages
 
 
@@ -9,10 +10,16 @@ def read(*paths):
     >>> read("README.md")
     ...
     """
+=======
+from setuptools import setup , find_packages
+
+def read(*paths):
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c
     rootpath = os.path.dirname(__file__)
     filepath = os.path.join(rootpath, *paths)
     with open(filepath) as file_:
         return file_.read().strip()
+<<<<<<< HEAD
 
 
 def read_requirements(path):
@@ -21,12 +28,22 @@ def read_requirements(path):
         line.strip()
         for line in read(path).split("\n")
         if not line.startswith(("#", "git+", '"', '-'))
+=======
+    
+
+def read_requeriments(path):
+    return[
+        line.strip()
+        for line in read(path).split("\n")
+        if not line.startswith(("#","gir+",'"','-'))
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c
     ]
 
 
 setup(
     name="dundie",
     version="0.1.0",
+<<<<<<< HEAD
     description="Reward Point System for Dunder Mifflin",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -34,13 +51,28 @@ setup(
     python_requires=">=3.8",
     packages=find_packages(),
     entry_points={
+=======
+    description="Reward point System for dundle Mifflin",
+    author="Moisés Filipe",
+    packages=find_packages(),
+    entry_points= {
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c
         "console_scripts": [
             "dundie = dundie.__main__:main"
         ]
     },
+<<<<<<< HEAD
     install_requires=read_requirements("requirements.txt"),
     extras_require={
         "test": read_requirements("requirements.test.txt"),
         "dev": read_requirements("requirements.dev.txt")
     }
 )
+=======
+    install_requires=read_requeriments("requirements.txt"),
+    extras_require={
+        "test": read_requeriments("requirements.test.txt"),
+        "dev": read_requeriments("requirements.dev.txt"),
+    }
+)
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c

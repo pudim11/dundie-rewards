@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # dev dependencies
 ipython>=7.0.0,<=8.0.0
 ipdb
@@ -15,3 +16,8 @@ mkdocs
 
 # Install project as editable
 -e .
+=======
+ipython
+ipdb
+pudb
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c

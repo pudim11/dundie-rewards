@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto Dundie Rewards
 
 [![CI](https://github.com/rochacbruno/dundie-rewards/actions/workflows/main.yml/badge.svg)](https://github.com/rochacbruno/dundie-rewards/actions/workflows/main.yml)
@@ -35,3 +36,6 @@ pip install -e `.[dev]`
 dundie load assets/people.csv
 ```
 
+=======
+# dundie-rewards
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c

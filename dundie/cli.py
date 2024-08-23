@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import json
 
 import pkg_resources
@@ -97,3 +98,34 @@ def remove(ctx, value, **query):
     """Removes points from the user or dept."""
     core.add(-value, **query)
     ctx.invoke(show, **query)
+=======
+import argparse
+from dundie.core import load
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Dunder Mifflin Rewards CLI",
+        epilog= "Enjoi and use with cautious",
+        )    
+    
+    parser.add_argument(
+        "subcommand", 
+        type= str,
+        help="The subcommand to run",
+        choices=("load","show","send"),
+        default= "help",
+    )
+    
+    parser.add_argument(
+        "filepath",
+        type= str,
+        help="File path to load",
+        default=None,
+    )
+    
+    args = parser.parse_args()
+    try:
+        globals()[args.subcommand](args.filepath)
+    except KeyError:
+        print("subcommand is invalid")
+>>>>>>> 199ecad93caddf53d4240b3a889817690898ae9c
